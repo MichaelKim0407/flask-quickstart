@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    {# http://flask.pocoo.org/docs/1.0/quickstart/#static-files #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<p>
+    We have
+    <span class="text-blue">red</span>,
+    <span class="text-red">green</span>,
+    and <span class="text-green">blue</span> texts.
+</p>
+</body>
+</html>
