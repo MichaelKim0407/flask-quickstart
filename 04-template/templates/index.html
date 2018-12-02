@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+
+<body>
+<h1>Welcome!</h1>
+<p>You may want to have a look at:</p>
+<ul>
+    {# http://jinja.pocoo.org/docs/2.10/templates/ #}
+    {% for res in resources %}
+        <li>
+            <a href="/res/{{ res.id }}">{{ res.name }}</a>
+        </li>
+    {% endfor %}
+</ul>
+</body>
+</html>
