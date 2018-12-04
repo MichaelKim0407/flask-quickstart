@@ -8,11 +8,20 @@
         body {
             font-size: 3em;
         }
+
+        div.container {
+            width: 768px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     </style>
 </head>
 
 <body>
-<p>You are requesting resource {{ res.id }} "{{ res.name }}"</p>
-<p>The value is {{ res.value }}</p>
+<div class="container">
+    <p>You are requesting resource {{ res.id }} "{{ res.name }}"</p>
+    <p>The value is {{ res.value }}</p>
+    <p><a href="/">Back</a></p>
+</div>
 </body>
 </html>
