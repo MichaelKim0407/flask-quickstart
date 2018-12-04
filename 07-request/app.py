@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, jsonify
 
 __author__ = 'Michael'
 
@@ -21,6 +21,17 @@ def index():
 def clear():
     messages.clear()
     return redirect('/')
+
+
+@app.route('/api', methods=['GET'])
+def api():
+    format = request.args.get('format')
+    if format == 'json':
+        return jsonify(messages)
+    elif format == 'html':
+        return '<br>'.join(messages)
+    else:
+        return '\n'.join(messages)
 
 
 if __name__ == '__main__':
