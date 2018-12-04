@@ -1,0 +1,6 @@
+<ul>
+    <li><a href="/">Index</a></li>
+    {% for page in pages %}
+        <li><a href="/{{ page }}">Page {{ page }}</a></li>
+    {% endfor %}
+</ul>

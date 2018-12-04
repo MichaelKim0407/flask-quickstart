@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body>
+<div>
+    {% block body %}
+    {% endblock %}
+</div>
+<div>
+    {% include 'nav.html' %}
+</div>
+</body>
+</html>
