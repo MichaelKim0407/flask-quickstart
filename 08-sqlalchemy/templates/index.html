@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='form.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='table.css') }}">
+    <style>
+        div.break {
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Message</th>
+                <th>From</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            {% for message in messages %}
+                <tr>
+                    <th>{{ message.id }}</th>
+                    <td>{{ message.message }}</td>
+                    <td>{{ message.from_ }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <form method="post" action="/clear">
+            <input type="submit" value="Clear">
+        </form>
+        <form method="post" action="/init">
+            <input type="submit" value="Reset">
+        </form>
+    </div>
+
+    <div class="break"></div>
+
+    <div>
+        <form method="post" action="/">
+            <input name="message" type="text" autocomplete="off"
+                   placeholder="Add new message">
+            <input name="from" type="text" autocomplete="off"
+                   placeholder="Your name">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+</body>
+</html>
