@@ -1,0 +1,14 @@
+[
+    {
+        "message": "hello",
+        "from": "Michael"
+    },
+    {
+        "message": "hi",
+        "from": "Bob"
+    },
+    {
+        "message": "bye",
+        "from": "Lily"
+    }
+]
